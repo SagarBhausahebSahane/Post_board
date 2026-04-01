@@ -35,7 +35,7 @@ export default function PostFormModal({ open, editPost, onClose, onSubmit }) {
   };
 
   const removeImage = () => {
-    setImage(null);
+    setImage(null); 
     if (fileRef.current) fileRef.current.value = '';
   };
 
