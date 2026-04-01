@@ -1,21 +1,13 @@
 import React from 'react';
 
 function formatDate(ts) {
-  return new Date(ts).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  return new Date(ts).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric'});
 }
 
 export default function PostCard({ post, onView, onEdit, onDelete }) {
   return (
     <div className="card">
-      {post.image ? (
-        <img className="card-img" src={post.image} alt={post.title} loading="lazy" />
-      ) : (
-        <div className="card-img-placeholder">🖼</div>
-      )}
+      {post.image ? ( <img className="card-img" src={post.image} alt={post.title} loading="lazy" />) : (  <div className="card-img-placeholder">🖼</div>)}
       <div className="card-body">
         <div className="card-meta">
           <span className="card-date">{formatDate(post.createdAt)}</span>
