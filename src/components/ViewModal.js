@@ -1,7 +1,7 @@
 import React from 'react';
 
 function formatDate(ts) {
-  return new Date(ts).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric'});
+  return new Date(ts).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
 export default function ViewModal({ post, onClose }) {
