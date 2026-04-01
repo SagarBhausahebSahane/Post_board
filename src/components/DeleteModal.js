@@ -16,9 +16,7 @@ export default function DeleteModal({ post, onClose, onConfirm }) {
           <div className="delete-warn">
             ⚠️ This action cannot be undone. The post and its image will be permanently deleted.
           </div>
-          {post && (
-            <p className="delete-target-title">"{post.title}"</p>
-          )}
+          {post && ( <p className="delete-target-title">"{post.title}"</p> )}
         </div>
         <div className="modal-footer">
           <button className="btn-cancel" onClick={onClose}>Cancel</button>
