@@ -65,13 +65,7 @@ export default function App() {
     showToast('Post deleted.');
   };
 
-  const filtered = search.trim()
-    ? posts.filter(
-        p =>
-          p.title.toLowerCase().includes(search.toLowerCase()) ||
-          p.desc.toLowerCase().includes(search.toLowerCase())
-      )
-    : posts;
+  const filtered = search.trim() ? posts.filter( p => p.title.toLowerCase().includes(search.toLowerCase())) : posts;
 
   return (
     <div className="app">
